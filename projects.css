@@ -40,3 +40,122 @@ body {
 
 
 /* Main Section */
+.proj-sec {
+    margin-top: 40px;
+}
+
+.proj-sec1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj-sec1 h1 {
+    margin-bottom: 30px;
+}
+
+.proj-sec1 p {
+    text-align: center;
+}
+
+.proj-sec2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    background-image: url('./images/project.jfif');
+    height: 400px;
+    width: 300px;
+    background-size: contain;
+    background-position: center;
+   }
+
+.proj-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+   }
+
+
+
+
+/* Footer */
+
+.footer-sec {
+
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #03087B;
+    margin-top: 100px;
+
+}
+
+.foot-sec1 {
+    width: 50%;
+    color: white;
+    margin: 100px;
+}
+
+.foot-sec1 h1,
+p {
+    margin-bottom: 30px;
+}
+
+.foot-sec-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.foot-sec-icons i {
+    font-size: 35px;
+}
+
+.foot-sec2 form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.foot-sec2 input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    margin-right: 100px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(209, 211, 243, 1) 43%);
+    color: #03087B;
+}
+
+
+.foot-sec-button {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 80px;
+
+}
+
+.foot-sec-button a {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(209, 211, 243, 1) 43%);
+    color: #03087B;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 5px;
+}
