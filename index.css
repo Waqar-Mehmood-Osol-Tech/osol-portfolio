@@ -28,7 +28,7 @@ body {
 }
 
 .nav-pages {
-    margin-left: 150px;
+    margin-left: 250px;
 }
 
 .nav-pages a {
@@ -36,6 +36,10 @@ body {
     color: black;
     margin: 20px;
     font-weight: 600;
+}
+
+.nav-pages a:hover {
+    text-decoration: underline   ; 
 }
 
 
