@@ -37,7 +37,7 @@ body {
 }
 
 .nav-pages a:hover {
-    text-decoration: underline   ; 
+    text-decoration: underline;
 }
 
 
@@ -69,7 +69,7 @@ h1 {
 .serv-sec1-a1 p {
     text-align: justify;
     margin-top: 40px;
-
+    line-height: 160%;
 }
 
 .serv-sec1-a2 {
@@ -87,6 +87,7 @@ h1 {
 
     justify-content: center;
 
+
 }
 
 .serv-sec1-b1 img {
@@ -95,6 +96,7 @@ h1 {
 
 .serv-sec1-b2 {
     width: 50%;
+
 }
 
 
@@ -103,6 +105,8 @@ h1 {
 .serv-sec1-b2 p {
     text-align: justify;
     margin-top: 40px;
+    line-height: 160%;
+
 }
 
 
@@ -114,6 +118,7 @@ h1 {
 .serv-sec1-c1 p {
     text-align: justify;
     margin-top: 40px;
+    line-height: 160%;
 }
 
 .serv-sec1-c2 {
@@ -157,6 +162,7 @@ h1 {
 p {
     margin-bottom: 30px;
     text-align: justify;
+    line-height: 160%;
 }
 
 .foot-sec-icons {

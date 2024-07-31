@@ -60,6 +60,7 @@ body {
     text-align: justify;
     text-justify: inter-word;
     margin-top: 20px;
+    line-height: 160%;
 }
 
 .about-sec2 {
@@ -110,6 +111,8 @@ body {
 p {
     margin-bottom: 30px;
     text-align: justify;
+    line-height: 160%;
+
 }
 
 .foot-sec-icons {

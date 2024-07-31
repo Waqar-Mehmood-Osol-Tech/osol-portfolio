@@ -11,8 +11,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* Header */
-
+/* Header Section */
 .header-navbar {
     display: flex;
     justify-content: space-evenly;
@@ -44,102 +43,47 @@ body {
 
 
 /* Main Section */
-.proj-sec {
-    margin-top: 40px;
+.resume {
+    width: 100%;
 }
 
-.proj-sec1 {
+.imgdiv {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.proj-sec1 h1 {
-    margin-bottom: 30px;
+.imgdiv img {
+    margin-top: 60px;
+    border-radius: 20px;
 }
 
-.proj-sec1 p {
-    text-align: center;
-    margin: 0;
-}
-
-.proj-sec2 {
+.dbtn {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sec1-button {
+    text-align: left;
     margin-top: 30px;
 }
 
-.card {
-    position: relative;
-    background-image: url('./images/project.jfif');
-    height: 400px;
-    width: 300px;
-    background-size: contain;
-    background-position: center;
-    border-radius: 10px;
-}
-
-.proj-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* background-color: rgba(0, 0, 0, 0.85); */
-    background-color: rgba(32, 35, 104, 0.85);
-
-    color: white;
-    padding: 10px;
-    box-sizing: border-box;
-
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.proj-details1 {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-
-}
-
-
-.proj-details1 p {
-    margin: 0;
-    text-align: justify;
-}
-
-
-
-.proj-details2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    /* background-color: rgb(44, 42, 42, 0.5);
-    border-radius: 20%;
-    gap: 5px; */
-}
-
-.proj-details2 i {
-    
-    font-size: 40px;
-}
-
-.proj-details2 a {
+.main-sec1-button a {
+    display: inline-block;
+    padding: 10px 30px;
     text-decoration: none;
+    background-color: #03087B;
     color: white;
-    font-weight: bold;
+    border-radius: 5px;
 }
 
+.main-sec1-button :hover {
+    background-color: white;
+    color: #03087B;
+}
 
-
-/* Footer */
+/* Footer Section */
 .footer-sec {
     display: flex;
     justify-content: center;
