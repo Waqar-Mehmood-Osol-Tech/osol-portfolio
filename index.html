@@ -5,81 +5,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(209, 211, 243, 1) 43%);
+            font-family: 'Lato', sans-serif;
+        }
+
+        .font-leckerli {
+            font-family: 'Leckerli One', cursive;
+        }
+
+        /* blur the header when scroll */
+        .blur-header {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+
+            /* background-color: rgb(30 58 138);
+            color: white; */
+
+
+        }
+
+        #dropdown-menu {
+            background-color: rgb(219 234 254);
+        }
+    </style>
 </head>
 
-<body>
+<body class="m-0 p-0 flex flex-col min-h-screen">
     <!-- Header -->
-    <header>
-        <div class="header-navbar">
-            <div class="nav-logo">
+    <header id="header" class="fixed py-5 top-0 left-0 right-0 bg-white/40 lg:px-10 shadow-md z-50">
+        <div class="flex justify-between items-center p-4 lg:p-0">
+            <div class="text-2xl font-bold mr-36 font-leckerli">
                 <p>Waqar</p>
             </div>
-            <div class="nav-pages">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./services.html">Services</a>
-                <a href="./projects.html">Projects</a>
-                <!-- <a class="res-a" href="./Waqar_Mehmood_Resume.pdf" title="Download Resume" download>Resume</a> -->
-                <a href="./resume.html">Resume</a>
+            <div class="hidden font-bold lg:flex lg:ml-64 ">
+                <a href="./index.html" class="hover:underline mx-4">Home</a>
+                <a href="./about.html" class="hover:underline mx-4">About</a>
+                <a href="./services.html" class="hover:underline mx-4">Services</a>
+                <a href="./projects.html" class="hover:underline mx-4">Projects</a>
+                <a href="./resume.html" class="hover:underline mx-4">Resume</a>
             </div>
+            <button id="menu-btn" class="lg:hidden text-2xl">
+                <i id="menu-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
+            </button>
+        </div>
+        <div id="dropdown-menu"
+            class="hidden absolute top-24 left-0 right-0  backdrop-blur-md shadow-lg lg:hidden flex flex-col items-center z-50 text-center font-bold">
+            <a href="./index.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-house mr-2"></i>Home</a>
+            <a href="./about.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-user mr-2"></i>About</a>
+            <a href="./services.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-gear mr-2"></i>Services</a>
+            <a href="./projects.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-rectangle-list mr-2"></i>Projects</a>
+            <a href="./resume.html" class="w-full py-3 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-file mr-2"></i>Resume</a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="main-sec">
-            <div class="main-sec1">
-                <h6>Passionate</h6>
-                <h1>SOFTWARE ENGINEER</h1>
-                <h5>Full Stack Developer in MERN Stack and dedicated Software Engineer.</h5>
-                <p>I am devoted to crafting seamlessdigital experiences. With a sharp eye for detailand a knack for
-                    innovation, I am eager to contribute my dynamic skills to drive excellence in everyproject.
-                </p>
-                <div class="main-sec1-button">
-                    <a>Hire me</a>
+    <!-- Main Section -->
+    <main class="mt-32 mx-5 flex-grow lg:mx-0 lg:pt-0 lg:ml-10">
+        <div class="flex flex-col lg:mx-0 lg:flex-row justify-center items-center mt-10 lg:mb-0 lg:mr-0">
+
+            <div
+                class="order-1 w-full lg:order-2 mb-10 lg:mb-0 lg:pl-28 text-center lg:text-left lg:mr-24 flex flex-col items-center lg:items-start lg:w-1/2">
+                <div class="flex justify-center lg:justify-end ">
+                    <img src="./images/profilegrey.jpg" alt="profile"
+                        class="h-54 w-48 lg:h-72 lg:w-52 border-8 border-blue-900 rounded-full">
+                </div>
+                <div class="mt-4">
+                    <h6 class="text-lg font-bold lg:font-light lg:ml-8">Waqar Mehmood</h6>
+                </div>
+                <div class="hidden lg:flex justify-center lg:justify-start gap-4 mt-4 lg:ml-10">
+                    <i
+                        class="fa-brands fa-linkedin-in text-xl cursor-pointer transition-colors duration-300 hover:text-blue-500"></i>
+                    <i
+                        class="fa-brands fa-instagram text-xl cursor-pointer transition-colors duration-300 hover:text-blue-500"></i>
+                    <i
+                        class="fa-brands fa-facebook text-xl cursor-pointer transition-colors duration-300 hover:text-blue-500"></i>
+                    <i
+                        class="fa-brands fa-youtube text-xl cursor-pointer transition-colors duration-300 hover:text-blue-500"></i>
                 </div>
             </div>
 
-            <div class="main-sec2">
-                <div class="main-sec2-img">
-                    <img src="./images/profilegrey.jpg" alt="profile" height="150px" width="150px">
-                </div>
-                <div class="main-sec2-name">
-                    <h6>Waqar Mehmood</h6>
-                </div>
-                <div class="main-sec2-social">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-youtube"></i>
+            <div class="order-2 lg:order-1 lg:ml-0 lg:mt-0  text-center lg:text-left">
+                <h6 class="text-2xl mb-4 lg:text-4xl font-light  ">Passionate</h6>
+                <h1
+                    class="mt-2 mb-4 leading-tight font-bold text-blue-800 text-center text-2xl lg:text-left lg:text-4xl lg:mb-8">
+                    SOFTWARE ENGINEER
+                </h1>
+                <h5 class="mt-2 text-sm lg:text-base  lg:text-lg lg:leading-relaxed">Full Stack Developer in <span
+                        class="text-blue-600 font-medium  lg:text-lg lg:leading-relaxed">MERN Stack</span> and dedicated
+                    Software Engineer.</h5>
+                <p class="mt-4 text-sm leading-loose lg:text-base lg:w-3/4 lg:mb-8 lg:text-lg lg:leading-relaxed">I am
+                    devoted to
+                    crafting seamless digital experiences. With a sharp
+                    eye for detail and a knack for innovation, I am eager to contribute my dynamic skills to drive
+                    excellence in every project. Feel free to contact me on the givne links for any query!</p>
+                <div class="mt-6 flex justify-center items-center lg:justify-start">
+                    <a class="inline-block py-2 px-6 text-white bg-blue-900 rounded hover:bg-blue-500 lg:mt-4">Hire
+                        me</a>
                 </div>
             </div>
 
-            <div class="main-sec3">
-                <div class="ms3-1 brick"></div>
-                <div class="ms3-2 brick"></div>
-                <div class="ms3-3 brick"></div>
-                <div class="ms3-4 brick"></div>
-                <div class="ms3-5 brick"></div>
+            <div class="hidden lg:flex  order-3 flex-col justify-around items-center gap-10 mb-16 ">
+                <div class="w-12 h-8 bg-blue-900 shadow-lg"></div>
+                <div class="w-12 h-8 bg-blue-900 shadow-lg"></div>
+                <div class="w-12 h-8 bg-blue-900 shadow-lg"></div>
+                <div class="w-12 h-8 bg-blue-900 shadow-lg"></div>
+                <div class="w-12 h-8 bg-blue-900 shadow-lg"></div>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="footer-sec1">
-            <div class="ms3-1 brickb"></div>
-            <div class="ms3-2 brickb"></div>
-            <div class="ms3-3 brickb"></div>
-            <div class="ms3-4 brickb"></div>
-            <div class="ms3-5 brickb"></div>
+        <div class="hidden lg:flex order-3 lg:ml-0  gap-10 absolute flex flex-wrap">
+            <div class="w-8 h-10 bg-blue-900 shadow-md flex items-center justify-center"></div>
+            <div class="w-8 h-10 bg-blue-900 shadow-md flex items-center justify-center"></div>
+            <div class="w-8 h-10 bg-blue-900 shadow-md flex items-center justify-center"></div>
+            <div class="w-8 h-10 bg-blue-900 shadow-md flex items-center justify-center"></div>
+            <div class="w-8 h-10 bg-blue-900 shadow-md flex items-center justify-center"></div>
         </div>
 
+        <div class="lg:hidden p-4 text-white flex flex-col items-center bg-blue-900 mt-10">
+            <h3 class="text-xl mb-4">Get in Touch</h3>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="text-white"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-youtube text-2xl"></i></a>
+            </div>
+        </div>
     </footer>
+
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            dropdownMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            const ddmenu = document.getElementById('dropdown-menu');
+            if (window.scrollY > 0) {
+                header.classList.add('blur-header');
+            } else {
+                header.classList.remove('blur-header');
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>

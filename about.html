@@ -5,158 +5,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./about.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(209, 211, 243, 1) 43%);
+            font-family: 'Lato', sans-serif;
+        }
+
+        .font-leckerli {
+            font-family: 'Leckerli One', cursive;
+        }
+
+        /* blur the header when scroll */
+        .blur-header {
+            /* -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); */
+            background-color: rgb(30 58 138);
+            color: white;
+
+        }
+
+        .shadow-blue-md {
+            box-shadow: 0 4px 6px rgba(0, 0, 255, 0.2), 0 1px 3px rgba(0, 0, 255, 0.1);
+        }
+
+        .shadow-blue-lg {
+            box-shadow: 0 10px 15px rgba(0, 0, 255, 0.2), 0 4px 6px rgba(0, 0, 255, 0.1);
+        }
+
+        .rounded-lgg {
+            border-radius: 100px;
+        }
+
+        /* Add hover effect */
+        .skill:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 255, 0.85), 0 4px 6px rgba(0, 0, 255, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        #dropdown-menu {
+            background-color: rgb(219 234 254);
+        }
+    </style>
 </head>
 
-<body>
+<body class="m-0 p-0 flex flex-col min-h-screen">
     <!-- Header -->
-    <header>
-        <div class="header-navbar">
-            <div class="nav-logo">
+    <header id="header" class="fixed py-5 top-0 left-0 right-0 bg-white/40 lg:px-10 shadow-md z-50">
+        <div class="flex justify-between items-center p-4 lg:p-0">
+            <div class="text-2xl font-bold mr-36 font-leckerli">
                 <p>Waqar</p>
             </div>
-            <div class="nav-pages">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./services.html">Services</a>
-                <a href="./projects.html">Projects</a>
-                <a href="./resume.html">Resume</a>
+            <div class="hidden font-bold lg:flex lg:ml-64 ">
+                <a href="./index.html" class=" hover:underline mx-4">Home</a>
+                <a href="./about.html" class="hover:underline mx-4">About</a>
+                <a href="./services.html" class="hover:underline mx-4">Services</a>
+                <a href="./projects.html" class="hover:underline mx-4">Projects</a>
+                <a href="./resume.html" class="hover:underline mx-4">Resume</a>
             </div>
+            <button id="menu-btn" class="lg:hidden text-2xl">
+                <i id="menu-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
+            </button>
+        </div>
+        <div id="dropdown-menu"
+            class="hidden absolute top-24 left-0 right-0 backdrop-blur-md shadow-lg lg:hidden flex flex-col items-center z-50 text-center font-bold">
+            <a href="./index.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-house mr-2"></i>Home</a>
+            <a href="./about.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-user mr-2"></i>About</a>
+            <a href="./services.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-gear mr-2"></i>Services</a>
+            <a href="./projects.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-rectangle-list mr-2"></i>Projects</a>
+            <a href="./resume.html" class="w-full py-3 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-file mr-2"></i>Resume</a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="about-sec">
-            <div class="about-sec1">
-                <h1>Know Who I'm</h1>
-                <p>As a dedicated Full Stack Developer and Software Engineer, I am committed to creating seamless
-                    digital experiences through a balanced approach to both front-end and back-end development. My
-                    expertise includes a range of technologies including the MERN stack, React Native, deep
-                    learning, and
-                    NLP, all supported by a solid foundation in programming languages such as JavaScript, Python,
-                    and
-                    C++. My academic journey, culminating in a BS in Software Engineering from Superior University
-                    with
-                    a CGPA of , has fueled my passion for technology and innovation. Through my internship at Binary
-                    Tech and apprenticeship at DirAction, I have refined my skills in practical settings,
-                    contributing
-                    to various projects and tackling real-world coding challenges with creativity and precision.
 
-                    With a keen eye for detail and a collaborative mindset, I excel in problem-solving and enjoy
-                    staying
-                    abreast of the latest technological trends. My hands-on experience with tools like Tailwind CSS,
-                    React, and SQL, combined with certifications in React Native and JavaScript, ensures I bring
-                    both
-                    depth and breadth to every project. I am eager to leverage my skills and knowledge to drive
-                    excellence and innovation in the tech industry.</p>
+    <!-- Main Section -->
+    <main class="mt=32">
+        <div
+            class="hidden lg:flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mt-32 mx-24">
+            <div class="md:w-1/2">
+                <h1 class="text-3xl  lg:text-3xl font-bold mb-4">Know Who I'm</h1>
+                <p class="text-base lg:text-lg lg:leading-relaxed mt-5 text-justify">As a dedicated <span
+                        class="font-bold">Full Stack Developer</span>
+                    and Software Engineer, I am committed to creating seamless digital experiences through a balanced
+                    approach to both front-end and back-end development. My expertise includes a range of technologies
+                    including the <span class="font-bold"> MERN stack, React Native, deep learning, and NLP,</span> all
+                    supported by a solid foundation
+                    in programming languages such as <span class="font-bold">JavaScript, Python, and C++.</span> My
+                    academic journey, culminating in a
+                    BS in Software Engineering from Superior University, has fueled my passion for technology and
+                    innovation.My hands-on
+                    experience with tools like <span class="font-bold">Tailwind CSS, React,</span> and <span
+                        class="font-bold">SQL</span>, combined with certifications in <span class="font-bold">React
+                        Native</span>
+                    and <span class="font-bold">JavaScript</span>, ensures I bring both depth and breadth to every
+                    project. I am eager to
+                    leverage my skills and knowledge to drive excellence and innovation in the tech industry.</p>
             </div>
 
-            <div class="about-sec2">
-                <img src="./images/new-about.png" alt="about" height="300" width="450">
+            <div class="md:w-1/2 flex items-center justify-center lg:ml-24  ">
+                <img src="./images/new-about.png" alt="about" class="w-full h-auto max-w-xs md:max-w-md mx-auto">
             </div>
         </div>
 
-        <div class="skill-sec">
-            <div class="skill-head">
-                <h1>Skills</h1>
-            </div>
-            <div class="skill-sec1">
-                <div class="skill1 skill">
-                    <img src="./images/html_circle-removebg-preview.png" alt="html" height="100" width="100">
-                </div>
-                <div class="skill2 skill">
-                    <img src="./images/css circel.png" alt="html" height="100" width="100">
-                </div>
-                <div class="skill3 skill">
-                    <img src="./images/javascrip.png" alt="html" height="100" width="100">
-                </div>
-                <div class="skill4 skill">
-                    <img src="./images/ex_circle.png" alt="html" height="100" width="100">
-                </div>
-                <div class="skill5 skill">
-                    <img src="./images/node_circle-removebg-preview.png" alt="html" height="100" width="100">
-                </div>
+        <!-- Mobile know who im -->
+        <div
+            class="lg:hidden flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 mt-32 mx-5">
+            <div class="md:w-1/2 flex flex-col justify-center items-center">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4">Know Who I'm</h1>
+                <p class="text-base md:text-lg leading-loose mt-5 text-justify">As a dedicated <span
+                        class="font-bold">Full Stack Developer</span>
+                    and Software Engineer, I am committed to creating seamless digital experiences through a balanced
+                    approach to both front-end and back-end development. My expertise includes a range of technologies
+                    including the <span class="font-bold"> MERN stack, React Native, deep learning, and NLP,</span> all
+                    supported by a solid foundation
+                    in programming languages such as <span class="font-bold">JavaScript, Python, and C++.</span></p>
             </div>
 
-            <div class="skill-sec1">
-                <div class="skill6 skill">
-                    <img src="./images/download-removebg-preview.png" alt="html" height="100" width="100">
+            <div class="md:w-1/2 flex items-center justify-center">
+                <img src="./images/new-about.png" alt="about" class="w-full h-auto max-w-xs md:max-w-md ">
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <div class="text-center font-bold text-3xl mt-24 mb-8  md:text-2xl mb-8 lg:text-3xl lg:mt-24 lg:mb-8">Skills
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/mongo db circle.svg" alt="html"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill7 skill">
-                    <img src="./images/mongo db circle.svg" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/ex_circle.png" alt="html" class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill8 skill">
-                    <img src="./images/c== circle shap e.png" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/download-removebg-preview.png" alt="html"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill9 skill">
-                    <img src="./images/pythonc ircle.png" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/node_circle-removebg-preview.png" alt="html"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill10 skill">
-                    <img src="./images/git circle icon.png" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/html_circle-removebg-preview.png" alt="html"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
+                </div>
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/xampp cirle.png" alt="html" class="w-24 h-24 shadow-blue-md rounded-lgg skill">
+                </div>
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/git circle icon.png" alt="html"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
+                </div>
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/pythonc ircle.png" alt="html" class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
             </div>
         </div>
 
-
-
-        <div class="skill-sec">
-            <div class="skill-head">
-                <h1>Tools</h1>
+        <div class="mt-8">
+            <div class="text-center font-bold text-3xl mt-24 mb-8 lg:text-3xl lg:mt-24 lg:mb-8 md:text-2xl mb-4">Tools
             </div>
-            <div class="skill-sec1">
-                <div class="skill1 skill">
-                    <img src="./images/windows circle.svg" alt="html" height="100" width="100">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/windows circle.svg" alt="windows"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill2 skill">
-                    <img src="./images/vs code circle.png" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/vs code circle.png" alt="vs code"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill3 skill">
-                    <img src="./images/postman circle.svg" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/postman circle.svg" alt="postman"
+                        class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
-                <div class="skill4 skill">
-                    <img src="./images/figma_circle.png" alt="html" height="100" width="100">
-                </div>
-                <div class="skill5 skill">
-                    <img src="./images/xampp cirle.png" alt="html" height="100" width="100">
+                <div class="flex justify-center items-center mt-6 mb-6">
+                    <img src="./images/figma_circle.png" alt="figma" class="w-24 h-24 shadow-blue-md rounded-lgg skill">
                 </div>
             </div>
         </div>
     </main>
 
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-sec">
-            <div class="foot-sec1">
-                <h1>Get in Touch</h1>
-                <p>I'm excited to connect with you! Whether you have a project idea or just want to chat, feel free to
-                    reach out. Use the contact form below or email me directly at waqarmehmoodrana54@gmail.com. I look
-                    forward
-                    to hearing
-                    from you!</p>
-                <div class="foot-sec-icons">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-square-twitter"></i>
+        <!-- Desktop Footer -->
+        <div class="hidden lg:flex justify-center items-center h-72 bg-blue-900 mt-24 pl-24">
+            <div class="flex flex-col w-1/2 text-white">
+                <h1 class="mb-5 text-3xl font-bold leading-6 ">Get in Touch</h1>
+                <p class="mb-7 text-1xl leading-loose">I'm excited to connect with you! Whether you have a project idea
+                    or just want
+                    to chat, feel free to reach out. Use the contact form below or email me directly at
+                    waqarmehmoodrana54@gmail.com—I look forward to hearing from you!</p>
+                <div class="flex gap-7">
+                    <i class="fa-brands fa-linkedin text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-instagram text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-facebook text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-twitter text-3xl hover:text-blue-200"></i>
                 </div>
             </div>
-            <div class="foot-sec2">
-                <form action="./index.html">
-                    <input type="text" placeholder="enter you name">
-                    <input type="email" placeholder="enter you email">
-                    <input type="text" placeholder="any thing you want to ask reagarding services">
+            <div class="flex flex-col w-1/2 mt-5 justify-center items-center">
+                <form action="./index.html" class="flex flex-col gap-5">
+                    <input type="text" placeholder="enter you name"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
+                    <input type="email" placeholder="enter you email"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
+                    <input type="text" placeholder="any thing you want to ask regarding services"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
                 </form>
-                <div class="foot-sec-button">
-                    <a>Submit</a>
+                <div class="flex justify-center mt-5">
+                    <a href="#"
+                        class="inline-block px-8 py-2 text-base font-medium text-blue-900 bg-white rounded-lg hover:bg-gray-200">Submit</a>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Footer -->
+        <div class="lg:hidden p-4 text-white flex flex-col items-center bg-blue-900 mt-10">
+            <h3 class="text-xl mb-4">Get in Touch</h3>
+            <div class="flex gap-4">
+                <a href="#" class="text-white"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-youtube text-2xl"></i></a>
+            </div>
+        </div>
     </footer>
+
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            dropdownMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            const ddmenu  = document.getElementById('dropdown-menu');
+            if (window.scrollY > 0) {
+                header.classList.add('blur-header');
+                ddmenu.style.backgroundColor = 'rgb(30 58 138)';
+                ddmenu.style.borderTop = '1px solid white';
+
+            } else {
+                header.classList.remove('blur-header');
+                ddmenu.style.backgroundColor = ' rgb(219 234 254)';
+                ddmenu.style.borderTop = 'none';
+            }
+        });
+
+    </script>
 </body>
 
 </html>

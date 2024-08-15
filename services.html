@@ -5,107 +5,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link rel="stylesheet" href="./services.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(209, 211, 243, 1) 43%);
+            font-family: 'Lato', sans-serif;
+        }
+
+        .font-leckerli {
+            font-family: 'Leckerli One', cursive;
+        }
+
+        /* blur the header when scroll */
+        .blur-header {
+            /* -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); */
+            background-color: rgb(30 58 138);
+            color: white;
+
+        }
+        #dropdown-menu {
+            background-color: rgb(219 234 254);
+        }
+    </style>
 </head>
 
-<body>
+<body class="m-0 p-0 flex flex-col min-h-screen">
     <!-- Header -->
-    <header>
-        <div class="header-navbar">
-            <div class="nav-logo">
+    <header id="header" class="fixed py-5 top-0 left-0 right-0 bg-white/40 lg:px-10 shadow-md z-50">
+        <div class="flex justify-between items-center p-4 lg:p-0">
+            <div class="text-2xl font-bold mr-36 font-leckerli">
                 <p>Waqar</p>
             </div>
-            <div class="nav-pages">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./services.html">Services</a>
-                <a href="./projects.html">Projects</a>
-                <a href="./resume.html">Resume</a>
+            <div class="hidden font-bold lg:flex lg:ml-64 ">
+                <a href="./index.html" class="hover:underline mx-4">Home</a>
+                <a href="./about.html" class="hover:underline mx-4">About</a>
+                <a href="./services.html" class="hover:underline mx-4">Services</a>
+                <a href="./projects.html" class="hover:underline mx-4">Projects</a>
+                <a href="./resume.html" class="hover:underline mx-4">Resume</a>
             </div>
+            <button id="menu-btn" class="lg:hidden text-2xl">
+                <i id="menu-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
+            </button>
+        </div>
+        <div id="dropdown-menu"
+            class="hidden absolute top-24 left-0 right-0 backdrop-blur-md shadow-lg lg:hidden flex flex-col items-center z-50 text-center font-bold">
+            <a href="./index.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-house mr-2"></i>Home</a>
+            <a href="./about.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-user mr-2"></i>About</a>
+            <a href="./services.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-gear mr-2"></i>Services</a>
+            <a href="./projects.html" class="w-full py-3 border-b border-gray-300 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-rectangle-list mr-2"></i>Projects</a>
+            <a href="./resume.html" class="w-full py-3 hover:bg-blue-800 hover:text-white"><i
+                    class="fa-solid fa-file mr-2"></i>Resume</a>
         </div>
     </header>
 
+    <!-- Main -->
     <!-- Main Content -->
-    <main>
-        <div class="serv-sec">
-            <div class="serv-sec1">
-                <div class="serv-sec1-a1">
-                    <h1>Web Development</h1>
-                    <p>I work independently to provide top-notch web development services, crafting responsive,
-                       user-friendly websites tailored to your unique needs. Combining sleek design with seamless
-                       functionality, I ensure your site stands out and engages your audience effectively. Let's bring
-                       your vision to life with innovative web solutions.</p>
+    <main class="mt-40 lg:mt-32">
+        <div class="flex flex-col lg:flex-col lg:justify-center lg:items-center lg:w-full mx-5 lg:mx-0">
+
+            <!-- Web Development Section -->
+            <div class="flex flex-col lg:flex-row lg:items-start mb-14 lg:mb-28 w-full lg:w-5/6">
+                <div class="text-center lg:text-left lg:w-1/2">
+                    <h1 class="text-3xl lg:text-3xl font-bold mb-4">Web Development</h1>
+                    <p class="text-gray-700 mt-10 text-justify leading-relaxed text-lg">I work independently to provide
+                        top-notch web
+                        development services,
+                        crafting responsive, user-friendly websites tailored to your unique needs. Combining sleek
+                        design with seamless
+                        functionality, I ensure your site stands out and engages your audience effectively. Let's bring
+                        your vision to life with innovative web solutions.</p>
                 </div>
-                <div class="serv-sec1-a2">
-                    <img src="./images/webb.png" alt="web" height="300px" width="300px">
+                <div class="flex justify-center lg:w-1/2 lg:ml-10">
+                    <img src="./images/webb.png" alt="web" class="h-58 w-58 lg:h-64 lg:w-64">
                 </div>
             </div>
 
-            <div class="serv-sec1">
-                <div class="serv-sec1-b1">
-                    <img src="./images/mobile.svg" alt="mobile" height="300px" width="300px">
+            <!-- Mobile App Development Section -->
+            <div class="flex flex-col lg:flex-row lg:items-start mb-14 lg:mb-28 w-full lg:w-5/6">
+                <div class="flex justify-center mt-6 lg:w-1/2 lg:mr-10 order-2 lg:order-1">
+                    <img src="./images/mobile.svg" alt="mobile" class="h-58 w-58 lg:h-64 lg:w-64">
                 </div>
-                <div class="serv-sec1-b2">
-                    <h1>Mobile App Development</h1>
-                    <p>I develop intuitive and engaging mobile applications tailored to meet your specific requirements.
-                        My services ensure seamless performance across devices, providing users with a top-tier mobile
+                <div class="text-center lg:text-left lg:w-1/2 lg:pl-4 order-1 lg:order-2">
+                    <h1 class="text-3xl lg:text-3xl font-bold mb-4">Mobile App Development</h1>
+                    <p class="text-gray-700 mt-10 text-justify  leading-relaxed text-lg">I develop intuitive and
+                        engaging mobile applications
+                        tailored to meet your
+                        specific requirements. My services ensure seamless performance across devices, providing users
+                        with a top-tier mobile
                         experience. Let's work together to turn your app ideas into reality, enhancing your reach and
-                        impact.
-                    </p>
+                        impact.</p>
                 </div>
             </div>
 
-            <div class="serv-sec1">
-                <div class="serv-sec1-c1">
-                    <h1>Artificial Intelligence</h1>
-                    <p>I specialize in delivering cutting-edge artificial intelligence solutions to transform your
-                        business operations. From machine learning models to intelligent automation, I provide tailored
+            <!-- Artificial Intelligence Section -->
+            <div class="flex flex-col lg:flex-row lg:items-start mb-14 lg:mb-28 w-full lg:w-5/6">
+                <div class="text-center lg:text-left lg:w-1/2 lg:pr-4">
+                    <h1 class="text-3xl lg:text-3xl font-bold mb-4">Artificial Intelligence</h1>
+                    <p class="text-gray-700 mt-10 text-justify  leading-relaxed text-lg">I specialize in delivering
+                        cutting-edge artificial
+                        intelligence solutions
+                        to transform your business operations. From machine learning models to intelligent automation, I
+                        provide tailored
                         AI services that enhance efficiency and drive innovation. Let's harness the power of AI to
-                        elevate your business to new heights.
-                    </p>
+                        elevate your business to new heights.</p>
                 </div>
-                <div class="serv-sec1-c2">
-                    <img src="./images/ai.png" alt="ai" height="300px" width="300px">
+                <div class="flex justify-center lg:w-1/2 lg:ml-10">
+                    <img src="./images/ai.png" alt="ai" class="h-58 w-58 lg:h-64 lg:w-64">
                 </div>
             </div>
         </div>
     </main>
 
 
-
     <!-- Footer -->
     <footer>
-        <div class="footer-sec">
-            <div class="foot-sec1">
-                <h1>Get in Touch</h1>
-                <p>I'm excited to connect with you! Whether you have a project idea or just want to chat, feel free to
-                    reach out. Use the contact form below or email me directly at [your-email@example.com]—I look
-                    forward
-                    to hearing
-                    from you!</p>
-                <div class="foot-sec-icons">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-square-twitter"></i>
+        <!-- Desktop Footer -->
+        <div class="hidden lg:flex justify-center items-center h-72 bg-blue-900 mt-24 pl-24">
+            <div class="flex flex-col w-1/2 text-white">
+                <h1 class="mb-5 text-3xl font-bold leading-6 ">Get in Touch</h1>
+                <p class="mb-7 text-1xl leading-loose">I'm excited to connect with you! Whether you have a project idea
+                    or just want
+                    to chat, feel free to reach out. Use the contact form below or email me directly at
+                    waqarmehmoodrana54@gmail.com—I look forward to hearing from you!</p>
+                <div class="flex gap-7">
+                    <i class="fa-brands fa-linkedin text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-instagram text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-facebook text-3xl hover:text-blue-200"></i>
+                    <i class="fa-brands fa-square-twitter text-3xl hover:text-blue-200"></i>
                 </div>
             </div>
-            <div class="foot-sec2">
-                <form action="./index.html">
-                    <input type="text" placeholder="enter you name">
-                    <input type="email" placeholder="enter you email">
-                    <input type="text" placeholder="any thing you want to ask reagarding services">
+            <div class="flex flex-col w-1/2 mt-5 justify-center items-center">
+                <form action="./index.html" class="flex flex-col gap-5">
+                    <input type="text" placeholder="enter you name"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
+                    <input type="email" placeholder="enter you email"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
+                    <input type="text" placeholder="any thing you want to ask regarding services"
+                        class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
                 </form>
-                <div class="foot-sec-button">
-                    <a>Submit</a>
+                <div class="flex justify-center mt-5">
+                    <a href="#"
+                        class="inline-block px-8 py-2 text-base font-medium text-blue-900 bg-white rounded-lg hover:bg-gray-200">Submit</a>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Footer -->
+        <div class="lg:hidden p-4 text-white flex flex-col items-center bg-blue-900 mt-10">
+            <h3 class="text-xl mb-4">Get in Touch</h3>
+            <div class="flex gap-4">
+                <a href="#" class="text-white"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-youtube text-2xl"></i></a>
+            </div>
+        </div>
     </footer>
+
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            dropdownMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            const ddmenu  = document.getElementById('dropdown-menu');
+            if (window.scrollY > 0) {
+                header.classList.add('blur-header');
+                ddmenu.style.backgroundColor = 'rgb(30 58 138)';
+                ddmenu.style.borderTop = '1px solid white';
+
+            } else {
+                header.classList.remove('blur-header');
+                ddmenu.style.backgroundColor = ' rgb(219 234 254)';
+                ddmenu.style.borderTop = 'none';
+            }
+        });
+
+    </script>
 </body>
 
 </html>
