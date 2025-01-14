@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/osol.png" />
     <title>Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
@@ -269,7 +270,7 @@
                 <p class="mb-7 text-1xl leading-loose">I'm excited to connect with you! Whether you have a project idea
                     or just want
                     to chat, feel free to reach out. Use the contact form below or email me directly at
-                    waqarmehmoodrana54@gmail.com—I look forward to hearing from you!</p>
+                    <span class="font-bold">waqar.mahmood1@osoltech.com</span> - I look forward to hearing from you!</p>
                 <div class="flex gap-7">
                     <a href="https://www.linkedin.com/in/waqarmehmood"><i
                             class="fa-brands fa-linkedin text-3xl hover:text-blue-200"></i></a>
@@ -282,7 +283,7 @@
                 </div>
             </div>
             <div class="flex flex-col w-1/2 mt-5 justify-center items-center">
-                <form action="./index.html" class="flex flex-col gap-5">
+                <!-- <form action="./index.html" class="flex flex-col gap-5">
                     <input type="text" placeholder="enter you name"
                         class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900">
                     <input type="email" placeholder="enter you email"
@@ -293,7 +294,41 @@
                 <div class="flex justify-center mt-5">
                     <a href="#"
                         class="inline-block px-8 py-2 text-base font-medium text-blue-900 bg-white rounded-lg hover:bg-gray-200">Submit</a>
-                </div>
+                </div> -->
+            
+                <form
+                action="https://formspree.io/f/xyzzoqlb"
+                method="POST"
+                class="flex flex-col gap-5"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900"
+                  required
+                />
+                <input
+                 type="text"
+                  name="message"
+                  placeholder="Any questions regarding our services?"
+                  class="p-2 border border-gray-300 rounded-lg w-96 bg-gradient-to-r from-white to-[#D1D3F3] text-blue-900 resize-none"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="p-2 text-blue-900 font-bold bg-white rounded-lg hover:bg-blue-200 transition-all"
+                >
+                  Send
+                </button>
+            </form>
             </div>
         </div>
 
